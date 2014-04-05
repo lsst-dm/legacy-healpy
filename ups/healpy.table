@@ -1,0 +1,4 @@
+setupRequired(python)
+setupRequired(cfitsio)
+setupRequired(pyfits)
+envPrepend(PYTHONPATH, ${PRODUCT_DIR}/lib/python)

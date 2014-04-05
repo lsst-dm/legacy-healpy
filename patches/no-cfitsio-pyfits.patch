@@ -1,0 +1,25 @@
+diff -ur setup.orig.py setup_mod.py
+--- setup.orig.py	2014-02-25 11:03:55.000000000 -0600
++++ setup_mod.py	2014-04-04 18:53:18.080140967 -0500
+@@ -463,13 +463,9 @@
+ else:
+     cmdclass = {'build_ext': custom_build_ext, 'build_clib': build_external_clib}
+     libraries = [
+-        ('cfitsio', {
+-        'pkg_config_name': 'cfitsio',
+-        'local_source': 'cfitsio',
+-        'supports_non_srcdir_builds': False}),
+         ('healpix_cxx', {
+         'pkg_config_name': 'healpix_cxx',
+-        'local_source': 'healpixsubmodule/src/cxx/autotools'})
++        'local_source': 'healpixsubmodule/src/cxx/autotools'}),
+     ]
+     extension_list = [pixel_lib, spht_lib, hfits_lib,
+                       Extension("healpy._query_disc",
+@@ -503,6 +499,5 @@
+       ext_modules = extension_list,
+       package_data = {'healpy': ['data/*.fits', 'data/totcls.dat', 'test/data/*.fits', 'test/data/*.sh']},
+       setup_requires=setup_requires,
+-      install_requires=['pyfits'],
+       license='GPLv2'
+       )
