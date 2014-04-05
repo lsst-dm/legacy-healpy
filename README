@@ -1,6 +1,0 @@
-This is from Mario on April 3 20014:
-@KSK Btw., I got healpy to build on 10.9 w/o pip.
-Had to use the tarball from https://pypi.python.org/packages/source/h/healpy/healpy-1.7.4.tar.gz, though.
-The one from github requires autotools, etc.
-
-Need a patch to keep it from building pyfits.
