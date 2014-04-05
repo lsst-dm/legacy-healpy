@@ -1,6 +1,5 @@
-diff -ur setup.orig.py setup_mod.py
---- setup.orig.py	2014-02-25 11:03:55.000000000 -0600
-+++ setup_mod.py	2014-04-04 18:53:18.080140967 -0500
+--- healpy-1.7.4.orig/setup.py	2014-02-25 11:03:55.000000000 -0600
++++ healpy-1.7.4/setup.py	2014-04-04 18:53:18.080140967 -0500
 @@ -463,13 +463,9 @@
  else:
      cmdclass = {'build_ext': custom_build_ext, 'build_clib': build_external_clib}
