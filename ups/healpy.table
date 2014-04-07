@@ -1,5 +1,5 @@
 setupRequired(python)
-setupRequired(pykg-config)
+setupRequired(pykg_config)
 setupRequired(cfitsio)
 setupRequired(pyfits)
 envPrepend(PYTHONPATH, ${PRODUCT_DIR}/lib/python)
