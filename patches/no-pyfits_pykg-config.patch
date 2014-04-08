@@ -1,0 +1,20 @@
+--- healpy-1.7.4.orig/setup.py	2014-04-07 19:32:13.804092725 -0500
++++ healpy-1.7.4/setup.py	2014-04-07 19:35:37.901187194 -0500
+@@ -224,8 +224,8 @@
+     if e.errno != errno.ENOENT:
+         raise ValueError
+     log.warn('pkg-config is not installed, falling back to pykg-config')
+-    setup_requires = ['pykg-config >= 1.2.0']
+-    os.environ['PKG_CONFIG'] = sys.executable + ' ' + os.path.abspath('pykg_config.py')
++    #This is set up by requiring pykg_config
++    os.environ['PKG_CONFIG'] = os.path.join(os.environ['PYKG_CONFIG_DIR'], 'bin', 'pykg_config.py')
+ 
+ 
+ class build_external_clib(build_clib):
+@@ -503,6 +503,5 @@
+       ext_modules = extension_list,
+       package_data = {'healpy': ['data/*.fits', 'data/totcls.dat', 'test/data/*.fits', 'test/data/*.sh']},
+       setup_requires=setup_requires,
+-      install_requires=['pyfits'],
+       license='GPLv2'
+       )

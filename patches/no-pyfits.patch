@@ -1,9 +1,0 @@
---- healpy-1.7.4.orig/setup.py	2014-04-05 17:54:43.290167582 -0500
-+++ healpy-1.7.4/setup.py	2014-04-05 17:44:51.160187100 -0500
-@@ -503,6 +503,5 @@
-       ext_modules = extension_list,
-       package_data = {'healpy': ['data/*.fits', 'data/totcls.dat', 'test/data/*.fits', 'test/data/*.sh']},
-       setup_requires=setup_requires,
--      install_requires=['pyfits'],
-       license='GPLv2'
-       )
