@@ -8,7 +8,7 @@
 -    os.environ['PKG_CONFIG'] = sys.executable + ' ' + os.path.abspath('pykg_config.py')
 +    setup_requires = []
 +    #This is set up by requiring pykg_config
-+    os.environ['PKG_CONFIG'] = os.path.join(os.environ['PYKG_CONFIG_DIR'], 'bin', 'pykg_config.py')
++    os.environ['PKG_CONFIG'] = os.path.join(os.environ['PYKG_CONFIG_DIR'], 'bin', 'pykg-config.py')
  
  
  class build_external_clib(build_clib):
