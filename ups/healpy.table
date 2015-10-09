@@ -1,4 +1,5 @@
 setupRequired(python)
+setupRequired(numpy)
 setupRequired(pykg_config)
 setupRequired(cfitsio)
 setupRequired(pyfits)
