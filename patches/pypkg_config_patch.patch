@@ -1,0 +1,13 @@
+diff --git a/setup.py b/setup_EDITED.py
+index 51c2260..dd63e99 100755
+--- a/setup.py
++++ b/setup_EDITED.py
+@@ -160,7 +160,7 @@ class build_external_clib(build_clib):
+                 if e.errno != errno.ENOENT:
+                     raise
+                 log.warn('pkg-config is not installed, falling back to pykg-config')
+-                env['PKG_CONFIG'] = sys.executable + ' ' + os.path.abspath('run_pykg_config.py')
++                env['PKG_CONFIG'] = os.path.join(os.environ['PYKG_CONFIG_DIR'], 'bin', 'pykg-config.py')
+             else:
+                 env['PKG_CONFIG'] = 'pkg-config'
+ 
