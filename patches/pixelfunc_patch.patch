@@ -1,0 +1,13 @@
+diff --git a/healpy/pixelfunc.py b/healpy/pixelfunc_EDITED.py
+index 5e4b113..e5e68a3 100644
+--- a/healpy/pixelfunc.py
++++ b/healpy/pixelfunc_EDITED.py
+@@ -1292,7 +1292,7 @@ def get_interp_weights(nside,theta,phi=None,nest=False,lonlat=False):
+            [ 0.25,  0.  ]]))
+     """
+     check_nside(nside)
+-    if phi == None:
++    if phi is None:
+         theta,phi = pix2ang(nside,theta,nest=nest)
+     elif lonlat:
+         theta,phi = lonlat2thetaphi(theta,phi)
